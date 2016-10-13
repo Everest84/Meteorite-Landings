@@ -24,6 +24,7 @@ def getFile():
             continue
         else:
             break
+    return df
 
 # Ask user for lat, long, radius
 def userInput():
@@ -48,9 +49,9 @@ def searchArea(lat,long,search_radius):
     latitude = math.radians(lat)
     longitude = math.radians(long)
     print(latitude,longitude)
-    
+
 def main():
-    #getFile()
+    getFile()
     lat, long, search_radius = userInput()
     searchArea(lat, long, search_radius)
 
