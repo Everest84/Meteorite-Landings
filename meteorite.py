@@ -33,25 +33,24 @@ def userInput():
         latlong = coordinates.split(',')
         latlong_list = list(latlong)
         try:
-            lat = float(latlong_list[0])
-            long = float(latlong_list[1])
+            lat1 = float(latlong_list[0])
+            long1 = float(latlong_list[1])
         except ValueError:
             print("Enter a number.\n")
             continue
         else:
             break
     search_radius = float(input("How many kilometers radius?: "))
-    return lat, long, search_radius
+    return lat1, long1, search_radius
 
 # Calculate the search area
-def searchArea(lat,long,search_radius):
-    latitude = math.radians(lat)
-    longitude = math.radians(long)
-    print(latitude,longitude)
+def calculate(user_lat, user_long, user_search):
+    user_lat, user_long, user_search = lat1, long1, search_radius
     
+
 def main():
     #getFile()
-    lat, long, search_radius = userInput()
-    searchArea(lat, long, search_radius)
+    lat1, long1, search_radius = userInput()
+    searchArea(lat1, long1, search_radius)
 
 main()
